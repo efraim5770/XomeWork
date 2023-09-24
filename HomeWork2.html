@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Моя первая веб-страница</title>
+    </head> 
+    <body>
+
+    </body>
+    <script type="text/javascript">
+      var b;
+    console.log("тернарный="+manyChecks1());
+    console.log("условия="+manyChecks2());
+    function manyChecks1(){
+      let a=Math.floor(Math.random()*20)+1;
+      b=a;
+      console.log("a="+a);
+      return (a>10 ? 'a is bigger than 10':'a is less than or equal to 10 '+(a===5 ? 'an example of a special case':"))+(a===15 ? 'but a is not 15':")+(a>5 ? 'and a is greater than 5':'and a is less than or equal to 5')+(a % 2 ? ' and a is odd':' and a is even'));
+    }
+    function manyChecks2(){
+      let result='';
+      let a=b;
+      if(a>10) return 'a is bigger than 10';
+      else{
+        result='a is less than or equal to 10 ';
+        if(a===5)result+='an example of a special case';
+        else{
+          result+='))+(a===15 ? but a is not 15:';
+          if(a>5)result+='and a is greater than 5';
+          else{
+            result+=' and a is less than or equal to 5';
+          }
+          if(a % 2)result+='and a is odd';
+          else result+='and a is even';
+        }
+      }
+      return result;
+    }
+    </script>
+</html>
